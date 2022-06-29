@@ -1,0 +1,25 @@
+.ColorPicker {
+    width: 400px;
+    height: 150px;
+    margin-left: 30px;
+    margin-top: 30px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.ColorPicker__mini{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ColorPicker__option {
+    width: 50px;
+    height: 50px;
+    border: none;
+    transition: transform 250ms linear;
+    cursor: pointer;
+}
+
+.ColorPicker__option--active{
+    transform: scale(1.1);
+ }
