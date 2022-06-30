@@ -31,8 +31,10 @@ class ColorPicker extends Component {
                 type="button"
                 className={classNames}
                 key={label}
-                    style={{ backgroundColor: color }}
-                    onClick={()=>{this.setActiveIdx(index)}}
+                style={{ backgroundColor: color }}
+                onClick={() => {
+                  this.setActiveIdx(index);
+                }}
               ></button>
             );
           })}

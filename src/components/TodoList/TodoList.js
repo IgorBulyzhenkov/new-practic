@@ -1,6 +1,6 @@
 import './TodoList.css';
 
-export default function TodoList({ todos, onDeleteTodo }) {
+export default function TodoList({ todos, onDeleteTodo, onToggleCompleted }) {
   return (
     <div className="TodoList">
       <h2>Практика с классами</h2>
@@ -8,6 +8,12 @@ export default function TodoList({ todos, onDeleteTodo }) {
         {todos.map(({ id, text, completed }) => {
           return (
             <li key={id} className="TodoList__item">
+              <input
+                type="checkbox"
+                className="TodoList__checkbox"
+                checked={completed}
+                onChange={() => onToggleCompleted(id)}
+              ></input>
               <p className="TodoList__title">{text}</p>
               <button
                 type="button"
