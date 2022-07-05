@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/IgorBulyzhenkov/new-practic.git/static/css/main.cdaee03e.css",
-    "main.js": "/IgorBulyzhenkov/new-practic.git/static/js/main.a3d87649.js",
-    "index.html": "/IgorBulyzhenkov/new-practic.git/index.html",
-    "main.cdaee03e.css.map": "/IgorBulyzhenkov/new-practic.git/static/css/main.cdaee03e.css.map",
-    "main.a3d87649.js.map": "/IgorBulyzhenkov/new-practic.git/static/js/main.a3d87649.js.map"
+    "main.css": "/new-practic/static/css/main.cdaee03e.css",
+    "main.js": "/new-practic/static/js/main.a3d87649.js",
+    "index.html": "/new-practic/index.html",
+    "main.cdaee03e.css.map": "/new-practic/static/css/main.cdaee03e.css.map",
+    "main.a3d87649.js.map": "/new-practic/static/js/main.a3d87649.js.map"
   },
   "entrypoints": [
     "static/css/main.cdaee03e.css",
