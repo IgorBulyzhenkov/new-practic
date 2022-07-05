@@ -1,7 +1,9 @@
+import Modal from './Modal/Modal';
+import { Component } from 'react';
 import Counter from './Class/Counter';
 import Dropdown from './Dropdown/Dropdown';
 import ColorPicker from './ColorPicker/ColorPicker';
-import { Component } from 'react';
+
 import TodoList from './TodoList/TodoList';
 import data from './TodoList/todoList.json';
 import Form from './Form/Form';
@@ -22,8 +24,14 @@ class App extends Component {
   state = {
     todos: data,
     filter: '',
+    showModal: false,
   };
 
+  toggleModal = () => {
+    return this.setState(prev => ({
+      showModal: !prev.showModal,
+    }));
+  };
   addTodo = text => {
     if (text === '') return;
     const todo = {
@@ -73,16 +81,41 @@ class App extends Component {
     );
   };
 
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.todos !== prevState.todos) {
+      localStorage.setItem('todos', JSON.stringify(this.state.todos));
+    }
+  }
+
+  componentDidMount() {
+    const todos = localStorage.getItem('todos');
+    const parsedTodos = JSON.parse(todos);
+    console.log(parsedTodos);
+    if (parsedTodos) this.setState({ todos: parsedTodos });
+  }
+
   render() {
     const completedTodo = this.state.todos.reduce(
       (acc, todo) => (todo.completed ? acc + 1 : acc),
       0
     );
-    const { todos } = this.state;
+    const { todos, showModal } = this.state;
 
     const visibleTodos = this.getVisibleTodos();
     return (
       <div>
+        {showModal && (
+          <Modal onClose={this.toggleModal}>
+            <h1>Hello World</h1>
+            <p>My name is Igor!</p>
+            <button type="button" onClick={this.toggleModal}>
+              Close
+            </button>
+          </Modal>
+        )}
+        <button type="button" onClick={this.toggleModal}>
+          Open Modal
+        </button>
         <Form onSubmit={this.formSubmitHandler} />
         <Counter initialValue={10} />
         <Dropdown />
@@ -90,7 +123,7 @@ class App extends Component {
         <div>
           <span>Общее количество : {todos.length}</span>
           <span>Количество выполненых : {completedTodo}</span>
-        </div>
+        </div>{' '}
         <TodoList
           todos={visibleTodos}
           onDeleteTodo={this.deleteTodo}
