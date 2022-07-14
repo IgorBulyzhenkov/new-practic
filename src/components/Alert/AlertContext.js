@@ -1,20 +1,20 @@
-import React, { createContext, useContext, useState } from 'react';
+// import React, { createContext, useContext, useState } from 'react';
 
-const AlertContext = createContext();
+// const AlertContext = createContext();
 
-export const useAlert = () => {
-  return useContext(AlertContext);
-};
+// export const useAlert = () => {
+//   return useContext(AlertContext);
+// };
 
-export const AlertProvider = ({ children }) => {
-  const [alert, setAlert] = useState(false);
+// export const AlertProvider = ({ children }) => {
+//   const [alert, setAlert] = useState(false);
 
-  const toggle = () => {
-    setAlert(prev => !prev);
-  };
-  return (
-    <AlertContext.Provider value={alert}>{children}</AlertContext.Provider>
-  );
-};
+//   const toggle = () => {
+//     setAlert(prev => !prev);
+//   };
+//   return (
+//     <AlertContext.Provider value={alert}>{children}</AlertContext.Provider>
+//   );
+// };
 
 // export default AlertContext;

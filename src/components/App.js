@@ -1,39 +1,39 @@
-import Modal from './Modal/Modal';
-import { Component } from 'react';
-import Counter from './Class/Counter';
-import Dropdown from './Dropdown/Dropdown';
-import ColorPicker from './ColorPicker/ColorPicker';
+// import Modal from './Modal/Modal';
+// import { Component } from 'react';
+// import Counter from './Class/Counter';
+// import Dropdown from './Dropdown/Dropdown';
+// import ColorPicker from './ColorPicker/ColorPicker';
 
-import TodoList from './TodoList/TodoList';
-import data from './TodoList/todoList.json';
-import Form from './Form/Form';
-import TodoEditor from 'components/TodoEditor/TodoEditor';
-import shortid from 'shortid';
-import TodoFilter from './TodoFilter/TodoFilter';
-import Main from './Main/Main';
-import Alert from './Alert/Alert';
-import { AlertProvider } from './Alert/AlertContext';
+// import TodoList from './TodoList/TodoList';
+// import data from './TodoList/todoList.json';
+// import Form from './Form/Form';
+// import TodoEditor from 'components/TodoEditor/TodoEditor';
+// import shortid from 'shortid';
+// import TodoFilter from './TodoFilter/TodoFilter';
+// import Main from './Main/Main';
+// import Alert from './Alert/Alert';
+// import { AlertProvider } from './Alert/AlertContext';
 
-const colorPickerOptions = [
-  { label: 'red', color: '#F44336' },
-  { label: 'green', color: '#4CAF50' },
-  { label: 'blue', color: '#2196F3' },
-  { label: 'grey', color: '#607D8B' },
-  { label: 'pink', color: '#E91E63' },
-  { label: 'indigo', color: '#3F52B5' },
-];
+// const colorPickerOptions = [
+//   { label: 'red', color: '#F44336' },
+//   { label: 'green', color: '#4CAF50' },
+//   { label: 'blue', color: '#2196F3' },
+//   { label: 'grey', color: '#607D8B' },
+//   { label: 'pink', color: '#E91E63' },
+//   { label: 'indigo', color: '#3F52B5' },
+// ];
 
 
-function App() {
+// function App() {
  
 
-  return (
-    <AlertProvider>
-      <Alert />
-      <Main toggle={()=>{}} />
-    </AlertProvider>
-  );
-}
+//   return (
+//     <AlertProvider>
+//       <Alert />
+//       <Main toggle={()=>{}} />
+//     </AlertProvider>
+//   );
+// }
 
 // class App extends Component {
 //   state = {
@@ -121,7 +121,7 @@ function App() {
 //     const visibleTodos = this.getVisibleTodos();
 //     return (
 //       <div>
-//         {/* {showModal && (
+//          {showModal && (
 //           <Modal onClose={this.toggleModal}>
 //             <h1>Hello World</h1>
 //             <p>My name is Igor!</p>
@@ -150,7 +150,7 @@ function App() {
 //         <TodoFilter
 //           value={this.state.filter}
 //           onTodoChange={this.changeFilter}
-//         /> */}
+//         /> 
 //       </div>
 //     );
 //   }
